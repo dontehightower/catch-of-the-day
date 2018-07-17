@@ -1,0 +1,43 @@
+{
+  "name": "catch-of-the-day",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer-stylus": "0.10.0",
+    "babel-eslint": "^7.1.1",
+    "concurrently": "3.0.0",
+    "eslint": "^3.12.2",
+    "eslint-plugin-flowtype": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.8.0",
+    "react-scripts": "0.6.1",
+    "stylus": "0.54.5",
+    "@storybook/react": "^3.4.8",
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-links": "^3.4.8",
+    "@storybook/addons": "^3.4.8",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0"
+  },
+  "dependencies": {
+    "history": "^4.7.2",
+    "re-base": "^3.2.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^2.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
+    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "watch": "concurrently --names 'webpack, stylus' --prefix name 'npm run start' 'npm run styles:watch'"
+  }
+}
